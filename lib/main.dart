@@ -49,7 +49,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
-  String _parity = "EVEN";
+  String _parity = "GENAP";
   MaterialColor _color = Colors.red;
   bool _isVisible = false;
 
@@ -77,10 +77,10 @@ class _MyHomePageState extends State<MyHomePage> {
   void _setParity() {
     setState(() {
       if (_counter % 2 == 0) {
-        _parity = "EVEN";
+        _parity = "GENAP";
         _color = Colors.red;
       } else {
-        _parity = "ODD";
+        _parity = "GANJIL";
         _color = Colors.blue;
       }
 
