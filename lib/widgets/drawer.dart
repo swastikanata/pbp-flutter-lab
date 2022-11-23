@@ -40,6 +40,17 @@ Drawer buildDrawer(BuildContext context) {
             // Route menu ke data budget
           },
         ),
+        ListTile(
+          title: const Text('My Watch List'),
+          onTap: () {
+            if (route == '/mywatchlist') {
+              Navigator.pop(context);
+            } else {
+              Navigator.pushReplacementNamed(context, '/mywatchlist');
+            }
+            // Route menu ke my watch list
+          },
+        ),
       ],
     ),
   );

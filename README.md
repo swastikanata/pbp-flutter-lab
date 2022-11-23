@@ -1,5 +1,31 @@
 # PBP Flutter
 
+## Tugas 9
+### Pengambilan data JSON tanpa membuat model
+Kita dapat melakukan pengambilan data JSON tanpa membuat model. Notasi object dalam syntax JavaScript ekuivalen dengan Map yang terdiri dari pasangan key dan value. Namun, hal tersebut bukan merupakan best practice. Konversi data JSON ke dalam suatu model dilakukan untuk meminimalisir kesalahan pengambilan atau pengiriman data melalui HTTP request.
+
+### Widget yang digunakan dan fungsinya
+- `Text`, digunakan untuk menampilkan tulisan
+- `Padding`, digunakan untuk menambahkan _padding_.
+- `Center`, digunakan untuk membuat posisi `child` menjadi di tengah terhadap dirinya sendiri.
+- `Column`, digunakan untuk menampilkan `children` dalam posisi vertikal.
+- `Row`, digunakan untuk menampilkan `children` dalam posisi horizontal.
+- `Drawer`, digunakan untuk membuat panel yang dapat dimunculkan dan disembunyikan di samping layar sebagai navigasi.
+- `Flexible`, digunakan untuk mecegah terjadinya overflow
+- `CheckBox`, digunakan sebagai button checkbox untuk mengubah status watched pada sebuah WatchList
+
+### Mekanisme pengambilan dan ekstraksi data JSON pada Flutter
+- Data di-fetch dari sebuah API endpoint.
+- Data yang sudah di-fetch kemudian di-decode menjadi bentuk JSON.
+- Data dalam bentuk JSON dikonversi menjadi data dalam bentuk sebuah model.
+- Data dalam bentuk model tersebut ditampilkan pada aplikasi Flutter.
+
+### Pengimplementasian Checklist
+- Membuat tombol navigasi baru pada `Drawer` untuk mengakses page `mywatchlist` dan `watchlist_detail`.
+- Membuat sebuah model `WatchList` dengan fields sesuai dengan fields object `WatchList` pada Tugas 3.
+- Membuat page `mywatchlist` untuk menampilkan judul-judul `WatchList` yang diperoleh melalui API endpoint dari Tugas 3. Judul-judul tersebut ditampilkan secara vertikal dan dapat diklik untuk mengakses page `watchlist_detail`.
+- Membuat page `watchlist_detail` yang dapat diakses dengan mengklik sebuah `WatchList` pada page `mywatchlist`. Pada page ini terdapat detail dari object `WatchList` yang diperoleh dari argumen navigasi dan tombol back untuk kembali ke page `mywatchlist`.
+
 ## Tugas 8
 ### Perbedaan `Navigator.push` dan `Navigator.pushReplacement`
 `push` menumpuk route teratas sebelumnya dengan widget baru, sedangkan `pushReplacement` menggantikan route teratas sebelumnya dengan widget baru. `Navigator.push` akan "menumpuk" halaman baru di atas halaman sebelumnya, sedangkan  `Navigator.pushReplacement` akan menggantikan halaman lama dengan halaman baru.
